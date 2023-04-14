@@ -56,7 +56,7 @@ def handle_dialog(req, res):
         res['response']['card'] = {}
         res['response']['card']['image_id'] = r.choice(resourses.imgs)
         res['response']['card']['type'] = 'BigImage'
-        res['response']['card']['title'] = 'Держи! Хотите ещё картинку?'
+        res['response']['card']['title'] = '<speaker audio="alice-sounds-animals-cat-3.opus"> Держи! Хотите ещё картинку?'
 
     res['response']['text'] = \
         f"Ну хорошо"
