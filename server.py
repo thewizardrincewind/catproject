@@ -53,12 +53,10 @@ def handle_dialog(req, res):
         'хорошо'
     ]:
         # Пользователь согласился, прощаемся.
-        res['response']['text'] = 'Держи!'
-        res['response']['card']['type'] = "BigImage"
+        res['response']['card'] = {}
         res['response']['card']['image_id'] = r.choice(resourses.imgs)
-
-        if req['request']:
-            res['response']['text'] = 'Хотите ещё картинку?'
+        res['response']['card']['type'] = 'BigImage'
+        res['response']['card']['title'] = 'Держи! Хотите ещё картинку?'
 
     res['response']['text'] = \
         f"Ну хорошо"
