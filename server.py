@@ -60,6 +60,8 @@ def handle_dialog(req, res):
 
     res['response']['text'] = \
         f"Ну хорошо"
+    with open('users.txt', 'a') as file:
+        file.write(req['session']['user_id'] + ': ' + c)
     return
 
 
